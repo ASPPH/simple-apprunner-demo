@@ -18,9 +18,9 @@ def health():
 
 @app.get("/")
 def root():
-    msg = "Hello from app runner!"
+    msg = "This is an AppRunner service"
     if DEMO_ENV_VAR:
-        msg += f" You set this environment variable: {DEMO_ENV_VAR}"
+        msg += f" We set this variable: {DEMO_ENV_VAR}"
     return JSONResponse(status_code=status.HTTP_200_OK, content=msg)
 
 if __name__ == '__main__':
